@@ -1,0 +1,75 @@
+
+
+.banner-container{
+    background-color: rgb(245, 226, 247);
+    height: 36vh;
+    background-position: center;
+    background-size: cover;
+    padding: 22px;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.banner-inner-container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.banner{
+    width: 130px;
+}
+
+@media screen and (min-width:768px){
+    .banner-inner-container{
+        width:85%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .banner{
+        width: 230px;
+    }
+    
+
+}
+
+.close{
+    width: 30px;
+    height: 25px;
+    font-weight: 400;
+    font-family: "Roboto";
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.banner-heading{
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+.banner-text{
+    margin-top: 10px;
+    width: 92%;
+    font-size: 15px;
+}
+
+@media screen and (min-width:768px){
+    .banner-container{
+        height: 40vh;
+    }
+    .banner-heading{
+        font-size: 38px;
+    }
+    .banner-text{
+        font-size: 20px;
+        width: 550px;
+        margin-top: 15px;
+    }
+
+}
