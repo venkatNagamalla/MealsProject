@@ -46,3 +46,12 @@ export const ListContainer = styled.ul`
   display:flex;
   flex-wrap:wrap;
 `
+
+export const Anchor = styled.a`
+  text-decoration:none;
+  border:1px solid #000;
+`
+
+export const TopButton = styled.button`
+  border:1px solid #000;
+`

@@ -4,7 +4,7 @@ import Banner from '../Banner'
 import Loader from '../Loader'
 import Meal from '../Meal'
 import Failure from '../Failure'
-import {HomeContainer,RetryBtn,RecipesContainer,HomeInnerContainer,Container,Heading,ListContainer} from './styledComponents'
+import {HomeContainer,TopButton,Anchor,RetryBtn,RecipesContainer,HomeInnerContainer,Container,Heading,ListContainer} from './styledComponents'
 
 import './index.css'
 
@@ -55,8 +55,17 @@ const Home = () => {
      <Failure/>
      <RetryBtn>Retry</RetryBtn>
   </div>
+  
+  const renderFooter = () => <div>
+   <TopButton type="button"><Anchor href="#top">Go to Top</Anchor></TopButton>
+</div>
 
-  const renderSuccessView = () => <ListContainer>{apiConfig.details.map((eachMeal) => <Meal key={eachMeal.id} mealDetails={eachMeal} />)}</ListContainer>
+  const renderSuccessView = () => <>
+  <ListContainer>{apiConfig.details.map((eachMeal) => <Meal key={eachMeal.id} mealDetails={eachMeal} />)}</ListContainer>
+   {renderFooter()}
+  </>
+  
+
 
   const renderHomeRecipes = () => {
     switch (apiConfig.apiStatus) {
@@ -74,7 +83,7 @@ const Home = () => {
   return<>
     <Headers />
     <HomeContainer>
-      <Banner/>
+      <Banner id="top" />
       <HomeInnerContainer>
         <Container>
           <Heading>Explore Here!</Heading>
