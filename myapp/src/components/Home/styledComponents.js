@@ -55,3 +55,10 @@ export const Anchor = styled.a`
 export const TopButton = styled.button`
   border:1px solid #000;
 `
+
+export const FailureContainer = styled.div`
+  display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+`

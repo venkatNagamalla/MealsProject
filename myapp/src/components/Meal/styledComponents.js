@@ -9,6 +9,7 @@ export const Item = styled.li`
   height: 180px;
   list-style: none;
   border-radius:5px;
+  transition:all 0.5s ease-in-out 0.0s ;
   overflow:hidden;
   @media screen and (min-width: 576px) {
     flex: 0 0 calc(33% - 19px);
