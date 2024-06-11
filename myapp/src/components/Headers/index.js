@@ -32,13 +32,13 @@ const Headers = () => {
         </Menu>
         <IconsContainer bar={bar}>
           <Icons>
-            <NavLink className="nav" to="/">
+            <NavLink onClick={settingSideBar} className="nav" to="/">
               <Icon>Home</Icon>
             </NavLink>
-            <NavLink className="nav" to="/search">
+            <NavLink onClick={settingSideBar} className="nav" to="/search">
               <Icon>Search</Icon>
             </NavLink>
-            <NavLink className="nav" to="/favourite">
+            <NavLink onClick={settingSideBar} className="nav" to="/favourite">
               <Icon>Favourite</Icon>
             </NavLink>
           </Icons>

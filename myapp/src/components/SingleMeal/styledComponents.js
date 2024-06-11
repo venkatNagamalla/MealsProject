@@ -24,6 +24,10 @@ export const NameCategoryContainer = styled.div`
   align-items: center;
 `;
 
+export const StepsContainer = styled.div`
+  margin-top: 23px;
+`
+
 export const ImageContainer = styled.div`
   @media screen and (min-width: 768px) {
     display: flex;
@@ -89,7 +93,7 @@ export const NameContainer = styled.div`
 
 export const NameAreaContainer = styled.div`
   width: 100%;
-  padding: 15px;
+  padding: 20px;
   @media screen and (min-width: 768px) {
     width: 59%;
   }
@@ -99,6 +103,7 @@ export const Description = styled.p`
   font-family: "Roboto";
   font-size: 14px;
   line-height: 1.4;
+  margin-top: 13px;
   @media screen and (min-width: 576px) {
     font-size: 15px;
   }
@@ -131,7 +136,6 @@ export const FavBtn = styled.button`
 `;
 
 export const Container = styled.div`
-  margin-top: 15px;
 `;
 
 export const Heading = styled.h2`
@@ -143,16 +147,19 @@ export const Heading = styled.h2`
 export const List = styled.ol`
   font-family: "Roboto";
   margin-top: 8px;
-  padding-left: 15px;
+  padding-left: 2px;
 `;
 export const ListItem = styled.li`
   font-size: 15px;
+  list-style-type: decimal;
   font-weight: 450;
+  display:flex;
+  align-items:center;
   padding: 5px 0px 5px 0px;
 `;
 
 export const BottomContainer = styled.div`
-  padding: 15px;
+  padding: 20px;
 `;
 
 export const ButtonsContainer = styled.div`
@@ -203,4 +210,13 @@ export const Button = styled.button`
   @media screen and (min-width:768px){
   width: 100px;
   }
+`
+
+export const Ingredient = styled.p`
+  color: #000;
+  width: 200px;
+`
+
+export const Measure = styled.p`
+  color: #000;
 `

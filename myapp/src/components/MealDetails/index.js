@@ -42,6 +42,14 @@ const MealDetails = () => {
     ing10: obj.strIngredient10,
     ing11: obj.strIngredient11,
     ing12: obj.strIngredient12,
+    ing13: obj.strIngredient13,
+    ing14: obj.strIngredient14,
+    ing15: obj.strIngredient15,
+    ing16: obj.strIngredient16,
+    ing17: obj.strIngredient17,
+    ing18: obj.strIngredient18,
+    ing19: obj.strIngredient19,
+    ing20: obj.strIngredient20,
     measure1: obj.strMeasure1,
     measure2: obj.strMeasure2,
     measure3: obj.strMeasure3,
@@ -52,6 +60,17 @@ const MealDetails = () => {
     measure8: obj.strMeasure8,
     measure9: obj.strMeasure9,
     measure10: obj.strMeasure10,
+    measure11: obj.strMeasure11,
+    measure12: obj.strMeasure12,
+    measure13: obj.strMeasure13,
+    measure14: obj.strMeasure14,
+    measure15: obj.strMeasure15,
+    measure16: obj.strMeasure16,
+    measure17: obj.strMeasure17,
+    measure18: obj.strMeasure18,
+    measure19: obj.strMeasure19,
+    measure20: obj.strMeasure20,
+
   });
 
   const getMealData = async () => {
