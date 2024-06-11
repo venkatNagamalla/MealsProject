@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Failure from '../Failure'
 import Headers from "../Headers";
 import Loader from '../Loader'
+import SingleMeal from '../SingleMeal'
 
-import { MealContainer } from "./styledComponents";
+import { MealContainer, FailureContainer,RetryBtn } from "./styledComponents";
 
 const apiStatusConstants =  {
   initial: "INTIAL",
@@ -25,8 +27,9 @@ const MealDetails = () => {
     area: obj.strArea,
     name: obj.strMeal,
     category: obj.strCategory,
-    thumbnail: obj.thumbnail,
+    thumbnail: obj.strMealThumb,
     video: obj.strYoutube,
+    instructions:obj.strInstructions,
     ing1: obj.strIngredient1,
     ing2: obj.strIngredient2,
     ing3: obj.strIngredient3,
@@ -72,12 +75,24 @@ const MealDetails = () => {
   }, []);
 
   const renderLoaderView = () => <Loader/>
+  
+  const renderFailureView = () => (
+    <FailureContainer>
+      <Failure />
+      <RetryBtn onClick={getMealData} >Retry</RetryBtn>
+    </FailureContainer>
+  );
+
+  const renderSuccessView = () => <SingleMeal details={mealData.details} />
 
   const renderMeal = () => {
-    console.log(mealData)
     switch (mealData.apiStatus) {
       case apiStatusConstants.inProgress:
         return renderLoaderView()
+        case apiStatusConstants.failure:
+          return renderFailureView()
+        case apiStatusConstants.success:
+          return renderSuccessView()
       default:
         return null
     }

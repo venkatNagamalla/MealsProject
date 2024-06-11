@@ -15,6 +15,12 @@ export const HomeInnerContainer = styled.section`
 export const RetryBtn  = styled.button`
   border:1px solid #000;
   margin-top: 10px;
+  width: 60px;
+  height: 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #000;
 `
 
 export const Container  = styled.div`

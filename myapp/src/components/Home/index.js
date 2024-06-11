@@ -66,9 +66,9 @@ const Home = () => {
   );
 
   const renderFailureView = () => (
-    <FailureContainer className="failure-container">
+    <FailureContainer>
       <Failure />
-      <RetryBtn>Retry</RetryBtn>
+      <RetryBtn onClick={getData} >Retry</RetryBtn>
     </FailureContainer>
   );
 
